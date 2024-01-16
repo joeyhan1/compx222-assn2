@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Framingham Risk Score Calculator</title>
+  </head>
+  <body>
+	<h1 id="myH1">Framingham Risk Score Calculator</h1>
+	<!-- My pie chart with the data of the 10 year risk percentages-->
+	<div id="myCanvas">
+		<canvas id="canvas" width=400 height=300></canvas>
+	</div>
+	<!-- My dropdown boxes which the user can select their options from. They are all hidden except the first one-->
+	<div id="myCalculator">
+		<form action="index.js">
+			<div id="drop-down" name="drop-down">
+				<div id="myGender" name="myGender">
+					<label for="gender">Gender:</label>
+					<select name="genderSelect" id="genderSelect">
+					   <option value="1" selected>Male</option>
+					   <option value="2">Female</option>
+					</select>
+				</div>
+				<br>
+				<div id="myAge" name="myAge" hidden="hidden">
+					<label for="age">Age:</label>
+					<select name="ageSelect" id="ageSelect">
+						<option value="0" selected>20-34</option>
+					 	<option value="1">35-39</option>
+					 	<option value="2">40-44</option>
+					 	<option value="3">45-49</option>
+					 	<option value="4">50-54</option>
+					 	<option value="5">55-59</option>
+					 	<option value="6">60-64</option>
+					 	<option value="7">65-69</option>
+					 	<option value="8">70-74</option>
+					 	<option value="9">75-79</option>
+					</select>
+				</div>
+				<br>
+				<div id="myTotalcholesterol" name="myTotalcholesterol" hidden="hidden">
+					<label for="totalcholesterol">Total cholesterol, mg/dL:</label>
+					<select name="totalcholesterolSelect" id="totalcholesterolSelect">
+						<option value="0" selected>Under 160</option>
+						<option value="1">160-199</option>
+						<option value="2">200-239</option>
+						<option value="3">240-279</option>
+						<option value="4">280 or higher</option>
+					</select>
+				</div>
+				<br>
+				<div id="mySmoker" name="mySmoker" hidden="hidden">
+					<label for="smoker">Smoker:</label>
+					<select name="smokerSelect" id="smokerSelect">
+						<option value="0">Yes</option>
+						<option value="1" selected>No</option>
+					</select> 
+				</div>
+				<br>
+				<div id="myHdlcholesterol" name="myHdlcholesterol" hidden="hidden">
+					<label for="hdlcholesterol">HDL cholesterol, mg/dL:</label>
+					<select name="hdlcholesterolSelect" id="hdlcholesterolSelect">
+						<option value="0" selected>Under 40</option>
+						<option value="1">40-49</option>
+						<option value="2">50-59</option>
+						<option value="3">60 or higher</option>
+					</select>
+				</div>   
+				<br>
+				<div id="myTreated" name="myTreated" hidden="hidden">
+					<label for="treated">Treated blood pressure:</label>
+					<select name="treatedSelect" id="treatedSelect">
+						<option value="0" >Yes</option>
+						<option value="1" selected>No</option>
+					</select> 
+				</div>  
+				<br>   
+				<div id="myBloodpressure" name="myBloodpressure" hidden="hidden">
+					<label for="bloodpressure">Systolic blood pressure, mm Hg:</label>
+					<select name="bloodpressureSelect" id="bloodpressureSelect">
+						<option value="0" selected>Under 120</option>
+						<option value="1">120-129</option>
+						<option value="2">130-139</option>
+						<option value="3">140-159</option>
+						<option value="4">160 or higher</option>
+					</select>
+				</div>  
+				<br>    		      		
+			   </div>	
+		</form>
+		<div id="myButtons">
+			<button type="button" id="restart" name="restart" onclick="restartClicked()">Restart</button>
+			<button type="button" id="previous" name="previous" onclick="previousClicked()">Previous</button>
+			<button type="button" id="next" name="next" onclick="nextClicked()">Next</button> 
+			<!-- Calculates all the options data and display the pie chart-->
+			<button type="button" id="done" name="done" onclick="doneClicked()">Done</button>
+		</div>   
+	</div>
+  </body>
+  <script type="text/javascript" src="index.js"></script>
+</html>

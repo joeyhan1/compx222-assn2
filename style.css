@@ -1,0 +1,53 @@
+html {
+    background-image: linear-gradient(to right,#84CEEB, #C1C8E4);
+}
+
+h1#myH1 {
+    text-align: center;
+    padding-top: 100px;
+    color: #5680E9;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+div#myCanvas {
+    text-align: center;
+    border-width: 4px;
+    border-style: solid;
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    margin-top: 100px;
+    background-image: linear-gradient(to right,#5AB9EA, #5680E9);
+}
+div#myCalculator {
+    border-style: solid;
+    border-width: 4px;
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    padding-top: 20px;
+    text-align: center;
+    background-image: linear-gradient(to right,#5AB9EA, #5680E9);
+
+}
+
+div#myButtons {
+    margin-top: 10px;
+}
+
+button {
+    display: inline-block;
+    background-image: linear-gradient(to right,#84CEEB, #C1C8E4);
+}
+
+select {
+    display: inline-block;
+    background-image: linear-gradient(to right,#84CEEB, #C1C8E4);
+}
+
+label {
+    font-size: 18px;
+    color:black;
+    font-family:Arial, Helvetica, sans-serif
+}
